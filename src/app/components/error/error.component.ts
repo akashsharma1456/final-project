@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./error.component.css']
 })
 export class ErrorComponent implements OnInit {
-
+  eType = '404';
+  eMsg = 'That page was not found.';
   constructor() { }
 
   ngOnInit(): void {
