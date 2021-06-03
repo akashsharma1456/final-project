@@ -7,7 +7,7 @@ import { pizza } from '../models/pizza.model';
 })
 export class PizzaDetailComponent implements OnInit {
 
-  @Input() pizza!: pizza;
+  @Input() Pizza!: pizza;
   constructor() {
   }
 ngOnInit(): void {

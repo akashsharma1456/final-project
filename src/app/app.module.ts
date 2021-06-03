@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
-import { SearchResultsComponent } from './components/result/result.component';
 import { ErrorComponent } from './components/error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PizzaDetailComponent } from './components/pizza-detail/pizza-detail.component';
@@ -27,7 +26,6 @@ import { MenuComponent } from './components/menu/menu.component';
     SearchComponent,
     ErrorComponent,
     PizzaDetailComponent,
-    SearchResultsComponent,
     MenuComponent
   ],
   imports: [
