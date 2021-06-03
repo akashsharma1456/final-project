@@ -5,9 +5,9 @@ export class pizza {
   web : string;
   description: string;
   ingredients: Array<string>;
-  address: Array<string>;
+  address: Array<any>
 
-  constructor(pizzainfo: { id: number; name: string; restaurant: string; web: string; description: string; ingredients: string[]; address: string[]; }) {
+  constructor(pizzainfo: { id: any; name: any; restaurant: any; web: any; description: any; ingredients: any; address: any; }) {
     this.id = pizzainfo.id;
     this.name = pizzainfo.name;
     this.restaurant = pizzainfo.restaurant;

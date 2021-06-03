@@ -1,4 +1,6 @@
-<mat-card>
+<div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%">
+<mat-card *ngFor="let pizza of pizzas">
   <mat-card-header>
     <mat-card-title>{{pizza.name}}</mat-card-title>
     <mat-card-subtitle>
@@ -17,3 +19,5 @@
     <button mat-flat-button color="primary">Restaurant Locations</button>
   </mat-card-actions>
 </mat-card>
+</div>
+</div>

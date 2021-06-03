@@ -6,12 +6,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
+  query = '';
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
   Search(): void {
-
+    if (this.query.length === 0) {
+      return;
+    }
+    this.router.navigate(['search', this.query]);
   }
 }

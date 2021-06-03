@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { pizza } from '../models/pizza.model';
 @Component({
   selector: 'app-pizza-detail',
   templateUrl: './pizza-detail.component.html',
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzaDetailComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() pizza!: pizza;
+  constructor() {
   }
-
+ngOnInit(): void {
+  }
 }
