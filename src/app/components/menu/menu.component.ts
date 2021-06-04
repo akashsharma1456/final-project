@@ -20,25 +20,25 @@ export class MenuComponent implements OnInit {
   //   })
   // }
   ngOnInit(): void {
-    this.route.params.subscribe((p) => {
-      this.query = p.query;
-      this.pizzaService.getPizzas(this.query).subscribe(
-        (pizzas) => { this.pizzas = pizzas; }
-      );
-      ( response : pizza[]) => {
-        console.log(response);
-        this.pizzas = response;
-      }
-    });
+    // this.route.params.subscribe((p) => {
+    //   this.query = p.query;
+    //   this.pizzaService.getPizzas(this.query).subscribe(
+    //     (pizzas) => { this.pizzas = pizzas; }
+    //   );
+    //   ( response : pizza[]) => {
+    //     console.log(response);
+    //     this.pizzas = response;
+    //   }
+    //});
     //this.pizzaService.getPizzas();
-     //this.getpizzas();
+     this.getpizzas();
   };
-  //  getpizzas() {
-  //  this.httpClient.get<any>('https://my-burger-api.herokuapp.com/burgers').subscribe(
-  //    (     response: pizza[]) => {
-  //      console.log(response);
-  //      this.pizzas = response;
-  //    }
-  //  );
-  //  }
+   getpizzas() {
+   this.httpClient.get<any>('https://my-burger-api.herokuapp.com/burgers').subscribe(
+     (     response: pizza[]) => {
+       console.log(response);
+       this.pizzas = response;
+     }
+   );
+   }
 }
