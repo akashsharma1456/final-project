@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PizzaService } from 'src/app/services/pizza.service';
-import { pizza } from '../models/pizza.model';
+import { BurgerService } from 'src/app/services/burger.service';
+import { burger } from '../models/burger.model';
 
 @Component({
   selector: 'app-menu',
@@ -10,34 +10,34 @@ import { pizza } from '../models/pizza.model';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  pizzas!: Array<pizza>;
+  burgers!: Array<burger>;
   query!: string;
-  constructor(private route: ActivatedRoute, private pizzaService: PizzaService, private httpClient: HttpClient) { }
-  // getPizzas() {
-  //   this.pizzaService.getPizzas().subscribe((results) => {
-  //     this.pizzas = results.results;
+  constructor(private route: ActivatedRoute, private pizzaService: BurgerService, private httpClient: HttpClient) { }
+  // getBurgers() {
+  //   this.burgerService.getBurger().subscribe((results) => {
+  //     this.burgers = results.results;
   //     console.log('JSON Response = ', JSON.stringify(results));
   //   })
   // }
   ngOnInit(): void {
     // this.route.params.subscribe((p) => {
     //   this.query = p.query;
-    //   this.pizzaService.getPizzas(this.query).subscribe(
-    //     (pizzas) => { this.pizzas = pizzas; }
+    //   this.BurgerService.getburgers(this.query).subscribe(
+    //     (burgers) => { this.burgers = burgers; }
     //   );
-    //   ( response : pizza[]) => {
+    //   ( response : burger[]) => {
     //     console.log(response);
-    //     this.pizzas = response;
+    //     this.burgers = response;
     //   }
     //});
-    //this.pizzaService.getPizzas();
-     this.getpizzas();
+    //this.BurgerService.getBurgers();
+     this.getBurgers();
   };
-   getpizzas() {
+   getBurgers() {
    this.httpClient.get<any>('https://my-burger-api.herokuapp.com/burgers').subscribe(
-     (     response: pizza[]) => {
+     (     response: burger[]) => {
        console.log(response);
-       this.pizzas = response;
+       this.burgers = response;
      }
    );
    }

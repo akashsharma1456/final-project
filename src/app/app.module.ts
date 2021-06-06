@@ -6,7 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { ErrorComponent } from './components/error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PizzaDetailComponent } from './components/pizza-detail/pizza-detail.component';
+import { BurgerDetailComponent } from './components/burger-detail/burger-detail.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,7 +25,7 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     SearchComponent,
     ErrorComponent,
-    PizzaDetailComponent,
+    BurgerDetailComponent,
     MenuComponent
   ],
   imports: [
